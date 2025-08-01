@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import memeImg from "../assets/image.png"
 export default function Main () {
     const [meme, setMeme] = useState({
@@ -6,11 +6,29 @@ export default function Main () {
     bottomText:"Walk into Mordor",        imageUrl: memeImg
     })
 
+    const [allMemeImg, setAllMemeImg] = useState([])
+
+    useEffect(() => {      
+        fetch("https://api.imgflip.com/get_memes").then(res => res.json()).then(data => setAllMemeImg(data.data.memes))
+        //console.log(allMemeImg)
+    }, [])
+    console.log(allMemeImg)
     function hanndleChange(event) {
         const {value , name} = event.currentTarget
         setMeme( prevMeme => ({
             ...prevMeme,
             [name]: value
+        }))
+    }
+
+
+    function getMeme() {
+        console.log("clicked")
+        const randomNum = Math.floor(Math.random() * allMemeImg.length)
+        const newUrl = allMemeImg[randomNum].url
+        console.log(newUrl)
+        setMeme(prev => ({
+            ...prev,imageUrl: newUrl
         }))
     }
 
@@ -39,7 +57,7 @@ export default function Main () {
                 </label>
                 </div>
 
-                <button>Get a new meme image ✅</button>
+                <button onClick={getMeme}>Get a new meme image ✅</button>
             </div>
 
             <div className="meme">
