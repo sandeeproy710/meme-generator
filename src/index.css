@@ -3,3 +3,127 @@
   
 }
 
+body {
+  margin: 0;
+}
+
+.headerContainer > img {
+  width: 80px;
+  margin-left: 40px;
+}
+
+.headerContainer {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  background: #322a9b;
+  background: linear-gradient(90deg,rgba(50, 42, 155, 1) 0%, rgba(83, 237, 211, 1) 100%);
+  color: white;
+}
+
+.mainBody { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+
+}
+
+.innerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.form>button {
+  display: block;
+  width: 580px;
+  height: 50px;
+  margin: 30px 0px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #322a9b;
+  background: linear-gradient(90deg,rgba(50, 42, 155, 1) 0%, rgb(47, 168, 148) 100%);
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+
+.form > input{
+  min-width: 450px;
+}
+
+.inputLabel {
+  font-size: 1.2rem;
+  background-color: white;
+  min-width: 250px;
+  min-height: 40px;
+  border-radius: 9px;
+  border: 1.5px solid #bebebe;
+
+}
+
+.labelText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+  margin: 0px 30px;
+  color: #525252;
+}
+
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme > img {
+  max-width: 900px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.meme span {
+  position: absolute;
+  text-align: center;
+  margin-block: 15px;
+  padding-inline: 5px;
+  font-family: impact, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
